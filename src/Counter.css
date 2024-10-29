@@ -12,7 +12,6 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-/* Full-screen background */
 .container {
     display: flex;
     flex-direction: column;
@@ -20,13 +19,12 @@ body, html {
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    width: 100vw; /* Ensure it spans the full width */
-    background: linear-gradient(135deg, #84fab0, #8fd3f4); /* Set your desired gradient */
+    width: 100vw;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4); 
     color: #333;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark mode styles */
 .container.dark {
     background: #2c3e50;
     color: white;
@@ -83,7 +81,7 @@ p {
     transition: color 0.3s, transform 0.2s;
 }
 
-/* Dynamic color feedback */
+
 .counter.low p {
     color: #f44336;
 }
@@ -96,7 +94,7 @@ p {
     color: #4caf50;
 }
 
-/* Buttons */
+
 .controls {
     display: flex;
     gap: 1em;
@@ -128,8 +126,6 @@ button:hover:not(:disabled) {
 button:active {
     transform: scale(0.95);
 }
-
-/* Settings Section */
 .settings {
     margin-top: 1em;
     text-align: left;
@@ -157,28 +153,27 @@ label input[type="checkbox"] {
 }
 .controls {
     display: flex;
-    justify-content: center; /* Center buttons horizontally */
-    gap: 1em; /* Space between buttons */
+    justify-content: center; 
+    gap: 1em;
     margin: 1em 0;
 }
 .controls button {
     
-    padding: 10px 15px; /* Increase padding for better touch targets */
-    font-size: 1rem; /* Consistent font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth background change */
+    padding: 10px 15px; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    border: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
 }
 
 .controls button:hover {
-    background-color: #f0f0f0; /* Light gray background on hover */
+    background-color: #f0f0f0; 
 }
-/* Footer */
 .footer {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 1em;
-    margin-top: 20px; /* Space above footer */
+    margin-top: 20px; 
 
     width: 100%;
     text-align: center;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Counter.css';
-import { FaPlus, FaMinus, FaSyncAlt, FaSun, FaMoon, FaInfoCircle, FaHistory, FaShareAlt } from 'react-icons/fa'; // Import new icons
+import { FaPlus, FaMinus, FaSyncAlt, FaSun, FaMoon, FaInfoCircle, FaHistory, FaShareAlt } from 'react-icons/fa'; 
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -8,32 +8,30 @@ const Counter = () => {
   const [upperLimit, setUpperLimit] = useState(10);
   const [lowerLimit, setLowerLimit] = useState(0);
   const [allowNegative, setAllowNegative] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(false); // Dark mode state
-  const [history, setHistory] = useState([]); // History state
+  const [isDarkMode, setIsDarkMode] = useState(false); 
+  const [history, setHistory] = useState([]); 
 
-  // Toggle dark mode
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
-  // Event Handlers
   const handleIncrement = () => {
     if (count + step <= upperLimit) {
       setCount(count + step);
-      setHistory((prev) => [...prev, `Incremented by ${step}`]); // Add to history
+      setHistory((prev) => [...prev, `Incremented by ${step}`]); 
     }
   };
 
   const handleDecrement = () => {
     if (allowNegative || count - step >= lowerLimit) {
       setCount(count - step);
-      setHistory((prev) => [...prev, `Decremented by ${step}`]); // Add to history
+      setHistory((prev) => [...prev, `Decremented by ${step}`]); 
     }
   };
 
   const handleReset = () => {
     setCount(0);
-    setHistory((prev) => [...prev, 'Reset']); // Add to history
+    setHistory((prev) => [...prev, 'Reset']); 
   };
 
   const showInfo = () => {
@@ -48,7 +46,6 @@ const Counter = () => {
     alert(`Current Count: ${count}. Share this value!`);
   };
 
-  // Dynamic class for color changes
   const getCounterClass = () => {
     if (count === 0) return 'counter reset';
     if (count >= upperLimit * 0.7) return 'counter high';
