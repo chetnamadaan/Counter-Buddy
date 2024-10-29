@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body, html {
+    height: 100%;
+    
+    font-family: Arial, sans-serif;
+}
+
+/* Full-screen background */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    width: 100vw; /* Ensure it spans the full width */
+    background: linear-gradient(135deg, #84fab0, #8fd3f4); /* Set your desired gradient */
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+.container.dark {
+    background: #2c3e50;
+    color: white;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1em;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+.footer{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0a520c;
+    margin: 0.5em 0;
+    transition: color 0.3s, transform 0.2s;
+}
+
+/* Dynamic color feedback */
+.counter.low p {
+    color: #f44336;
+}
+
+.counter.high p {
+    color: #ff9800;
+}
+
+.counter.reset p {
+    color: #4caf50;
+}
+
+/* Buttons */
+.controls {
+    display: flex;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+button {
+    padding: 0.7em 1.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #4caf50;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Settings Section */
+.settings {
+    margin-top: 1em;
+    text-align: left;
+    width: 100%;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5em;
+    font-size: 1.1em;
+    color: #555;
+}
+
+label input[type="number"] {
+    margin-left: 0.5em;
+    width: 70px;
+    padding: 0.4em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label input[type="checkbox"] {
+    margin-left: 0.5em;
+}
+.controls {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 1em; /* Space between buttons */
+    margin: 1em 0;
+}
+.controls button {
+    
+    padding: 10px 15px; /* Increase padding for better touch targets */
+    font-size: 1rem; /* Consistent font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.controls button:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+/* Footer */
+.footer {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1em;
+    margin-top: 20px; /* Space above footer */
+
+    width: 100%;
+    text-align: center;
+}
